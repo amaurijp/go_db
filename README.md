@@ -76,3 +76,7 @@ The manual annotations serve as the ground truth. A parameter is considered corr
 - A false negative corresponds to a manually annotated parameter that was missed by the LLM.
 
 This structure was used to evaluate the performance of the LLM extraction pipeline across the eight LDA-derived graphene-based materials topics.
+
+# 3. Parameter Communities Recommendation
+
+## (recommend_system_lookup_table.json)
