@@ -1,5 +1,6 @@
-# 1. LLM Parameter Extraction Validation Set (extraction_validation_data.json)
+# 1. LLM Parameter Extraction Validation Set
 
+## (extraction_validation_data.json)
 This repository contains a manually curated validation set used to evaluate LLM-based parameter extraction from scientific articles on graphene-based materials. The validation set was created from 40 articles, with five articles selected from each of eight topics identified previously by Latent Dirichlet Allocation (LDA) topic modeling.
 
 For each article, relevant experimental parameters were manually identified and used as the ground truth. The LLM-extracted parameters were then compared against this manual annotation to evaluate whether the model correctly recovered the parameter name and its associated value.
