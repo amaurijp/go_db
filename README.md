@@ -77,6 +77,62 @@ The manual annotations serve as the ground truth. A parameter is considered corr
 
 This structure was used to evaluate the performance of the LLM extraction pipeline across the eight LDA-derived graphene-based materials topics.
 
+# 2. 
+
+## (xxxx.json)
+
 # 3. Parameter Communities Recommendation
+
+# 3. Parameter Communities Recommendation
+
+One JSON file is provided:
+
+- `recommend_system_lookup_table.json`: contains the probability that a given parameter community is relevant given a topic and a material cotegory.
+
+
+## JSON Structure
+
+Each entry contains a dictionary with five keys: <code>{'topic', 'material', 'community', 'probability', 'parameters'}</code>. Since there are 8 topics, 9 material categories, and 32 parameter communities, the dataset contains 2,304 entries.  Probabilities close to zero indicate that a given parameter community is not frequently reported in association with that topic and material class.
+
+```json
+[
+    {
+        "topic": "Catalysis",
+        "material": "Non-graphene-based target",
+        "community": "C1",
+        "probability": 0.7747933884297521,
+        "parameters": [
+            "substrate_dimensions",
+            "membrane_thickness",
+            "water_cement_ratio",
+            "degassing_time",
+            "interlayer_spacing",
+            "coating_thickness",
+            "surface_roughness",
+            "immersion_time",
+            "water_flux",
+            "filtration_pressure",
+            "curing_time",
+            "water_contact_angle",
+            "operating_pressure",
+            "curing_temperature",
+            "simulation_temperature",
+            "effective_membrane_area",
+            "substrate_material"
+        ]
+    },...
+```
+
+### Field Descriptions
+
+
+| Field | Type | Description |
+|---|---|---|
+| `topic` | string | Topic $t_i$ . |
+| `material` | string | Material category $\Omega_i$. |
+| `community` | string | Community $c_i$. |
+| `probability` | float | The conditional probability of observing parameter community $c_i$ given topic $t_i$ for material category $\Omega_i$. |
+| `parameters` | list | List of parameters (strings) for that community. |
+
 
 ## (recommend_system_lookup_table.json)
