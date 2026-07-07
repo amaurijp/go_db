@@ -83,11 +83,6 @@ This structure was used to evaluate the performance of the LLM extraction pipeli
 
 # 2. Material Classification Validation Set
 
-Two JSON files are provided:
-
-- `validation_dataset_gold.jsonl`:
-- `validation_dataset_kimi_k2_original.jsonl`:
-
 This repository also contains a manually curated validation set for material classification in graphene-based materials articles. The validation set was built from 80 articles, with 10 articles selected from each of the eight LDA-derived topics. Each record corresponds to one material-production entry extracted from an article.
 
 For each material entry, the LLM was asked to classify the target material using an operational graphene-material taxonomy. The taxonomy distinguishes whether the target is graphenic or non-graphenic and, when applicable, records the graphene-family identity, layer/dimensionality, chemical state, physical form, composition class, and graphenic component role.
