@@ -2,7 +2,7 @@
 
 Two JSON files are provided:
 
-- `xxxx.json` contains manually annotated parameters from 40 articles on graphene oxide (GO), classified into eight application-based topics: 1, Catalysis; 2, Energy Storage; 3, Polymer and Composite Reinforcement; 4, Soft Matter and Scaffolds; 5, Biomedical and Drug Delivery; 6, Water Treatment and Membranes; 7, Nanosensors; and 8, Films and Coatings.
+- `manually_extracted_parameters.json` contains manually annotated parameters from 40 articles on graphene oxide (GO), classified into eight application-based topics: 1, Catalysis; 2, Energy Storage; 3, Polymer and Composite Reinforcement; 4, Soft Matter and Scaffolds; 5, Biomedical and Drug Delivery; 6, Water Treatment and Membranes; 7, Nanosensors; and 8, Films and Coatings.
 - 
 - `extraction_validation_data.json`: contains the extraction validation set used to calculate precision, recall and F1-score of the LLM extraction.
 
