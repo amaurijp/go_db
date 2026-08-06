@@ -2,7 +2,8 @@
 
 Two JSON files are provided:
 
-- `manually_extracted_parameters.json` contains manually annotated parameters from 40 articles on graphene oxide (GO), classified into eight application-based topics: 1, Catalysis; 2, Energy Storage; 3, Polymer and Composite Reinforcement; 4, Soft Matter and Scaffolds; 5, Biomedical and Drug Delivery; 6, Water Treatment and Membranes; 7, Nanosensors; and 8, Films and Coatings.
+- `manually_extracted_parameters.json` contains manually annotated parameters from 40 articles on graphene oxide (GO), classified into eight application-based topics: 1, Catalysis; 2, Energy Storage; 3, Polymer and Composite Reinforcement; 4, Soft Matter and Scaffolds; 5, Biomedical and Drug Delivery; 6, Water Treatment and Membranes; 7, Nanosensors; and 8, Films and Coatings. This ground-truth (GT) dataset can be used to calculate precision, recall, and F1 score for information-extraction tasks performed by LLMs.
+
 - `extraction_validation_data.json`: contains the extraction validation set used to calculate precision, recall and F1-score of the LLM extraction.
 
 This repository contains a manually curated validation set used to evaluate LLM-based parameter extraction from scientific articles on graphene-based materials. The validation set was created from 40 articles, with five articles selected from each of eight topics identified previously by Latent Dirichlet Allocation (LDA) topic modeling.
