@@ -199,3 +199,58 @@ Each entry contains a dictionary with five keys: <code>{'topic', 'material', 'co
 | `community` | string | Community $c_i$. |
 | `probability` | float | The conditional probability of observing parameter community $c_i$ given topic $t_i$ for material category $\Omega_i$. |
 | `parameters` | list | List of parameters (strings) for that community. |
+
+
+# 4. CO2 Adsorption Dataset for Graphene-Based Materials
+
+This repository contains a curated dataset of CO2 adsorption measurements for graphene, graphene oxide (GO), and graphene/GO-based materials. The dataset is intended to support data-driven analysis and machine-learning modeling of CO2 uptake as a function of material properties and experimental conditions.
+
+The records were extracted from the scientific literature and harmonized into a tabular format. Each row corresponds to one reported adsorption measurement for a specific material under a given pressure and temperature condition.
+
+## Dataset Structure
+
+The dataset contains 9 columns:
+
+| Column | Description | Unit / Format |
+|---|---|---|
+| `doi` | DOI or DOI-derived identifier of the source publication | Text |
+| `material` | Material name as reported or normalized from the source article | Text |
+| `bet_surface_area_m2_g` | BET specific surface area of the material | m2/g |
+| `pressure_bar` | CO2 adsorption pressure | bar |
+| `adsorption_temperature_K` | Adsorption temperature | K |
+| `pore_volume_cm3_g` | Total pore volume of the material, when reported | cm3/g |
+| `year` | Publication year of the source article | Year |
+| `material_taxonomy` | Curated material category, such as graphene, graphene oxide, or graphene-based composite | Text |
+| `co2_capacity_mg_g` | Reported CO2 adsorption capacity | mg/g |
+
+## Target Variable
+
+The main prediction target is:
+
+```text
+co2_capacity_mg_g
+```
+
+This variable represents the amount of CO2 adsorbed per gram of material under the reported experimental conditions.
+
+## Example Rows
+
+| doi | material | bet_surface_area_m2_g | pressure_bar | adsorption_temperature_K | pore_volume_cm3_g | year | material_taxonomy | co2_capacity_mg_g |
+|---|---|---:|---:|---:|---:|---:|---|---:|
+| `10.1039_c4ra09314c` | GA-E | 10 | 0.5 | 303.15 |  | 2014 | Graphene composite | 40.94332 |
+| `10.1039_c4ra09314c` | GA-E | 10 | 0.4 | 303.15 |  | 2014 | Graphene composite | 36.07912 |
+| `10.1039_c4ra09314c` | GA-E | 10 | 0.35 | 303.15 |  | 2014 | Graphene composite | 33.56892 |
+
+## Notes on Missing Values
+
+Some material descriptors, especially `pore_volume_cm3_g`, may be missing when the original publication did not report the value. Missing entries should be treated as unavailable experimental metadata rather than zero values.
+
+## Suggested Use
+
+This dataset can be used for:
+
+- Regression modeling of CO2 adsorption capacity
+- Analysis of pressure and temperature effects on CO2 uptake
+- Comparison of graphene, graphene oxide, and composite adsorbents
+- Literature-based materials informatics studies
+- Feature engineering using text-derived material taxonomy and experimental descriptors
