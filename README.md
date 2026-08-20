@@ -203,7 +203,11 @@ Each entry contains a dictionary with five keys: <code>{'topic', 'material', 'co
 
 # 4. CO2 Adsorption Dataset for Graphene-Based Materials
 
-This repository contains a curated dataset of CO2 adsorption measurements for graphene, graphene oxide (GO), and graphene/GO-based materials. The dataset is intended to support data-driven analysis and machine-learning modeling of CO2 uptake as a function of material properties and experimental conditions.
+A CSV file is provided:
+
+- `co2_adsorption_dataset.csv` contains a curated dataset of CO2 adsorption measurements for graphene, graphene oxide (GO), and graphene/GO-based materials.
+
+The dataset is intended to support data-driven analysis and machine-learning modeling of CO2 uptake as a function of material properties and experimental conditions.
 
 The records were extracted from the scientific literature and harmonized into a tabular format. Each row corresponds to one reported adsorption measurement for a specific material under a given pressure and temperature condition.
 
@@ -232,14 +236,6 @@ co2_capacity_mg_g
 ```
 
 This variable represents the amount of CO2 adsorbed per gram of material under the reported experimental conditions.
-
-## Example Rows
-
-| doi | material | bet_surface_area_m2_g | pressure_bar | adsorption_temperature_K | pore_volume_cm3_g | year | material_taxonomy | co2_capacity_mg_g |
-|---|---|---:|---:|---:|---:|---:|---|---:|
-| `10.1039_c4ra09314c` | GA-E | 10 | 0.5 | 303.15 |  | 2014 | Graphene composite | 40.94332 |
-| `10.1039_c4ra09314c` | GA-E | 10 | 0.4 | 303.15 |  | 2014 | Graphene composite | 36.07912 |
-| `10.1039_c4ra09314c` | GA-E | 10 | 0.35 | 303.15 |  | 2014 | Graphene composite | 33.56892 |
 
 ## Notes on Missing Values
 
